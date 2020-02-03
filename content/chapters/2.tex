@@ -1,0 +1,50 @@
+%!TEX root = ../../main.tex
+%!TEX program = xelatex
+%!BIB program = biber
+
+\chapter{Objektorientierung}
+\section{Grundlegendes}
+Vor der Objektorientierung wurden Systeme in Prozeduren, Funktionen und Daten zerlegt. In einem solchen System liegen die Prozeduren und Daten getrennt voneinander. Es entstanden große monolithische Systeme die schlecht zu warten und schlecht zu skalieren waren. Änderungen in der Datenstruktur führten zu Änderungen in allen betroffenen Funktionen. Die Lösung zu diesem Problem war der OO-Ansatz, bei dem Prozeduren und Daten zu einem neuen zusätzlichen Strukturelement zusammengefasst wurden. Diese Objekte bringen eine Kapselung innerhalb eines Programms. Objekte sind grundlegende Beschreibungsmöglichkeiten von Dingen aus der realen Welt. Dabei beschreiben die Daten in einem Objekt die Eigenschaften des Äquivalenz in der realen Welt und die Prozeduren (auch Funktionen genannt) die Fähigkeiten. Durch die Zerlegung des Systems zu Objekten müssen Änderungen in der Datenstruktur nur noch in einem kleinen festgelegten Teilbereich angepasst werden (statt das gesamte System nach Abhängigkeiten zu durchsuchen und gegebenenfalls an zu passen). Ein Objekt kann alles abbilden das mit den Menschlichen-Sinnen erfasst werden kann.
+
+\section{8 - Sätze der Objektorientierung}
+\begin{itemize}
+	\item[Vererbung] In der Objektorientierung können Eigenschaften und Fähigkeiten durch Vererbung von einem Objekt zu anderen Objekten weitergegeben werden [Beispiel: Das Objekt Person vererbt die Eigenschaften Name, Vorname an das Objekt des Studenten; Ein Student ist also eine Untermenge von Personen]. 
+	\item[Polymorphie] Durch Polymorphie können in ähnlichen Objekten, bei gleichem Input, unterschiedliches Verhalten ausgelöst werden.
+	\item[Kapselung] . Durch Kapselung wird festgelegt welche Eigenschaften bzw. Fähigkeiten nach außen (außerhalb eines Objekts) sichtbar sind.
+	\item[Geheimhaltung] Bei der Geheimhaltung geht es darum, dass ein Objekt offenbart „was“ es tut, aber nicht wie es dies tut.
+	\item[Persistenz] . Ein Objekt verbleibt, durch die Eigenschaft der Persistenz, in einem Zustand bis es von außen geändert wird.
+	\item[Nachrichten] . Ein Objekt kann via Nachrichten einem anderen Objekt eine Information übermitteln.
+	\item[Objektidentität] Objekte sind durch ihre Objektidentität (einzigartige Kennzeichnung und physikalischer Ort) eindeutig und unterscheidbar.
+	\item[Klassen] Ein OO-System besteht aus Klassen. Zusammenfassung von Objekten mit ähnlichen Eigenschaften und Fähigkeiten.
+\end{itemize}
+
+\section{Beziehungen zwischen Objekten}
+\subsection{Multiplizität}
+Durch die Multiplizität, die innerhalb von Objekten festgelegt wird, werden die jeweils maximalen Anzahlen an Verbindungen für jede Beziehung angegeben (1 - 1; 1 - n; n - n). Diese Eigenschaften werden in einem UML Diagramm auf den Verbindungen an den jeweiligen Objekten angegeben.
+\subsection{Assoziation}
+Assoziationen sind Verbindungen zwischen Objekten. Dabei gibt es drei verschiedene Formen. In einem UML Diagramm werden diese Beziehungen durch einen einfachen Strich mit einer Beschriftung (Name) und eine Mengenrelation angegeben.
+\begin{itemize}
+	\item $ \alpha $ und $ \beta $ kennen sich
+	\item $ \alpha $ und $ \beta $ sind mit einander verbunden
+	\item Zu jedem $ \alpha $ gibt es ein $ \beta $
+\end{itemize}
+
+\subsection{Teil-Ganzes Beziehung (Aggregation)}
+Wenn ein Obejkt ein Teil von einem größeren Objekt ist oder ein Teil eines Ganzem ist findet diese Verbindung Platz. Im UML Diagramm werden diese Beziehungen mit einer Raute am Ganzen und einem einfachen Strich zum Teilobjekt dargestellt. Ein Objekt kann immer nur in einem Objekt gleichzeitig sein.
+\begin{itemize}
+	\item $ \alpha $ besteht aus  $ \beta $
+	\item $ \alpha $ enthält $ \beta $
+	\item $ \beta $ ist Teil von  $ \alpha $
+\end{itemize}
+
+\subsubsection{Komposition}
+Komposition beschreibt eine zeitliche (logische) Abhängigkeit. Wenn das Ganze nicht mehr existiert, kann auch das Teil nicht mehr existieren. In einem UML Diagramm wird dies mit der ausgemalten Raute dargestellt.
+
+\subsection{Gerichtete Beziehung}
+Beschreibt eine unidirektionale Beziehung. $ \alpha $ kennt $ \beta $ aber $ \beta $ kennt $ \alpha $ nicht. In einem UML Diagramm wird diese Beziehung durch einen Pfeil in die Richtung der Beziehung gekennzeichnet.
+
+\section{OO-Sicht von Heeg}
+Laut Heeg beobachten wir Phänomene, die aktuell Teil des Weltgeschehens sind (Ein Phänomen könnte die Vorlesung sein). Aus dieser Beobachtung entstehen Begriffe, die in Klassen umgewandelt werden. Aus diesen Klassen entstehen Objekte die wiederum das Geschehen widerspiegeln (identifizieren, abstrahieren, instanziieren, repräsentieren).
+
+\section{Objektorientiertes Modell}
+Das Basismodell besteht aus Objekten und Klassen, die aus Eigenschaften und Fähigkeiten bestehen. Das Basismodell ist Teilmenge des statischen Modells, dass dieses durch Beziehungen und Vererbungen erweitert. Im dynamischen Modell ist das statische Modell enthalten und erweitert dieses um Aktivitäten, Abläufe/Sequenzen, Nachrichten und Zustände.

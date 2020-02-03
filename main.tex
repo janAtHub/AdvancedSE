@@ -1,0 +1,19 @@
+%!TEX program = xelatex
+%!BIB program = biber
+
+\documentclass[
+	a4paper,
+	fontsize=14pt
+]{report}
+
+\input{packages}
+
+
+\begin{document}
+	\pagenumbering{Roman}
+	\sloppy
+	\tableofcontents
+	\pagenumbering{arabic}
+	
+	\input{content/content}
+\end{document}
