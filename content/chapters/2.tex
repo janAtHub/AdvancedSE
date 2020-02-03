@@ -47,4 +47,16 @@ Beschreibt eine unidirektionale Beziehung. $ \alpha $ kennt $ \beta $ aber $ \be
 Laut Heeg beobachten wir Phänomene, die aktuell Teil des Weltgeschehens sind (Ein Phänomen könnte die Vorlesung sein). Aus dieser Beobachtung entstehen Begriffe, die in Klassen umgewandelt werden. Aus diesen Klassen entstehen Objekte die wiederum das Geschehen widerspiegeln (identifizieren, abstrahieren, instanziieren, repräsentieren).
 
 \section{Objektorientiertes Modell}
-Das Basismodell besteht aus Objekten und Klassen, die aus Eigenschaften und Fähigkeiten bestehen. Das Basismodell ist Teilmenge des statischen Modells, dass dieses durch Beziehungen und Vererbungen erweitert. Im dynamischen Modell ist das statische Modell enthalten und erweitert dieses um Aktivitäten, Abläufe/Sequenzen, Nachrichten und Zustände.
+Das Basismodell besteht aus Objekten und Klassen, die aus Eigenschaften und Fähigkeiten bestehen. Das Basismodell ist Teilmenge des statischen Modells, dass dieses durch Beziehungen und Vererbungen erweitert. Im dynamischen Modell ist das statische Modell enthalten und erweitert dieses um Aktivitäten, Abläufe/Sequenzen, Nachrichten und Zustände. Es gibt verschiedene Betrachtungen von dynamischen Aspekten. Hierzu zählen die Beschreibung der Aktivitäten, Zustände, Abläufe und Nachrichten in gleichnamigen Diagrammen (Aktivitätsdiagramm, Zustandsdiagramm, Ablaufdiagramm). Alles wird anschließend im Modell zur Systemnutzung zusammengefasst das durch den Anwendungsfall und die use-cases ergänzt wird.
+
+\subsection{Anwendungsfall (Modell zur Systemnutzung)}
+Ein Anwendungsfall ist eine Situation in der ein Objekt oder eine Menge von Objekten benutzt oder darauf zugegriffen wird. Der Anwendungsfall kann auch andere Objekte zulassen, muss also nicht auf ein spezifisches Objekt bezogen sein (Bsp. Anwendungsfall: Von A nach B kommen; Objekt zur Lösung des Problems: Auto; es gäbe jedoch auch die Möglichkeit zu laufen, fliegen etc.). Ein Objekt kann auch Antwort auf mehrere verschiedene Anwendungsfälle sein.
+
+\subsection{Zustandsdiagramm}
+Das Zustandsdiagramm wird repräsentiert durch alle Möglichen Zustände, die mit den Aktionen verbunden werden. Die Zustände werden in rechteckigen Kästen beschrieben und die Aktionen sind die Pfeile die die Übergänge von einem Zustand in den Anderen repräsentieren.
+
+\subsection{Aktionsdiagramm}
+Im Aktionsmodell werden alle möglichen Aktionen mit Transitionen dargestellt und mit einander verknüpft. Das Diagramm ähnelt dem UML Format und verknüpft die in rechteckigen Kästen untergebrachten Aktionen mit einfachen Pfeilen. Außerdem gibt es noch Entscheidungspunkt und Zusammenführungspunkte, die der Übersicht halber eingebaut werden um Aktionen auf zu splitten oder zusammen zu führen (Es muss während der Aktion eine Entscheidung getroffen werden die zu zwei unterschiedlichen Zuständen führt, Zwei gleiche Aktionen zeigen auf den selben Zustand).
+
+\subsection{Sequenzdiagramm}
+Das Sequenzdiagramm wird durch alle teilnehmenden Objekte nebeneinander dargestellt. Jedes Objekt erhält eine "Live-Line", die durch einen Strich (meist) nach unten dargestellt wird. Werden nun Nachrichten zwischen den einzelnen Akteuren geschickt, werden diese mit Querstrichen zwischen den "Live-Lines" abgebildet. Diese Querstriche werden in zeitlicher Abfolge untereinander angegeben und mit einer bezeichnenden Beschreibung beschriftet. Das Sequenzdiagramm bildet nur einen Pfad aus dem Aktionsdiagramm ab.
