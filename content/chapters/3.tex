@@ -1,0 +1,72 @@
+%!TEX root = ../../main.tex
+%!TEX program = xelatex
+%!BIB program = biber
+
+\chapter{Softwarearchitektur}
+\section{Definition}
+Begriff der Architektur: "Architektur ist die Wissenschaft von der Gestaltung und Konstruktion von Bauwerken.", somit ist die Softwarearchitektur die Wissenschaft von der Gestaltung und Konstruktion von Software-Bauwerken. Die Architektur, definiert den Rahmen, damit die Anforderungen an das Gebäude bestmöglich realisiert werden können. Dabei definiert die Architektur die Struktur und den Kontext für Design und Umsetzung. Dabei beschreibt sie nur den groben Lösungsentwurf und lässt genaue Details aus. Architektonische Entscheidungen sind grundlegend.
+
+Was braucht man für die Erstellung eines IT-Systems?
+
+\begin{itemize}
+	\item Textuelle Beschreibung
+	\item System Umgebung
+	\item Anwendungsfälle
+	\item Anzahl Nutzer
+	\item benötigte Rechenleistung
+	\item Kosten
+	\item Schnittstellen
+	\item Technologien
+\end{itemize}
+
+\section{Fähigkeiten eines Architekten}
+Was sind die Fähigkeiten und Eigenschaften eines Architekten?
+\begin{itemize}
+	\item methodische Fähigkeiten
+	\item Wissen: Wie komme ich zur benötigten Architektur? (Entscheiden, Beraten, verteidigen)
+	\item Vermittler zwischen den Interessengruppen (Auftraggeber, Auftragnehmer)
+	\item Fachliche und technische Fähigkeiten (Einarbeitung in das Fachgebiet des Auftraggebers)
+	\item Diplomatisches Geschick
+	\item Kommunikative Grundfähigkeit
+\end{itemize}
+
+\section{Ablauf und Aufgeben eines Architekten}
+Der grobe Ablauf und die Aufgaben eines Architekten:
+\begin{itemize}
+	\item Anforderungsanalyse (wenn nciht vorhanden, dann noch ermitteln)
+	\item Skizze oder Grobplanung (um eine Vorstellung davon zu schaffen, wie es aussehen könnte, erstes Modell[POC, UML, ...])
+	\item Feinplanung, Konstruktionszeichnungen, weitere Detaillierungen der Architektur, nicht funktionale Aspekte müssen hier beachtet werden (Sicherheit, Performance, ...)
+	\item Beantragung einholen
+	\item Überwachen des Bauvorhabens
+	\item Endabnahme durch Führen
+\end{itemize}
+
+\section{Spezialisierung in der IT-Architektur}
+Enterprise-Architekt: Entwirft Geschäftsprozesse und Unternehmensarchitekturen.
+
+System-Architekt: Entwirft ganze Systeme die die Geschäftsprozesse abbilden.
+
+Technologie-Architekt: Entwirft Komponenten innerhalb eines Systems.
+
+Die drei Architekten, stehen in einer hierarchischen Struktur und "erben" im Übertragenen Sinne die Aufgaben der darüber liegenden Ebene.
+
+\section{Qualitätskriterien in der IT-Architektur}
+\begin{itemize}
+	\item Performance, Antwortzeit, Durchsatzrate (Fähigkeit des Systems auf Anfragen in angemessener Zeit zu antworten)
+	\item Robustheit (Eigenschaft eines Systems auch unter ungünstigen Bedingungen zuverlässig zu funktionieren)
+	\item Sicherheit (Fähigkeit des Systems Fremdzugriffen abzuwehren)
+	\item Skalierbarkeit (Fähigkeit eines Systems auf eine sich ändernde Anzahl von Anfragen angepasst zu werden)
+	\item Wartbarkeit (Fähigkeit eines Systems angepasst bzw. erweitert zu werden)
+	\item Bedienbarkeit (Das System ist einfach zu bedienen)
+	\item Portabilität (Die Fähigkeit, das System auf unterschiedlichen Plattformen lauffähig zu machen)
+	\item Verfügbarkeit (Die Wahrscheinlichkeit, dass das System die Anfragen während eines vereinbarten Zeitraums erfüllt)
+	\item Testbarkeit (Die Fähigkeit ein System auf alle Anforderungen zu testen)
+\end{itemize}
+
+\section{Architekturprinzipien}
+\begin{enumerate}
+	\item Die die einfachste Architektur, die alle Anforderungen übernimmt
+	\item Prinzip der losesten Kopplung: Architektur-Bestandteile sollen so wenig wie möglich von einander abhängen.
+	\item Prinzip der Modularität, bedeutet, dass Architekturen aus Modulen zu größeren Funktionen verbunden werden, beziehungsweise einzelne Elemente können ausgetauscht werden.
+	\item Geheimhaltungsprinzip, legt nicht offen wie das System funktioniert, sondern gibt nur Input und Output bekannt.
+\end{enumerate}
